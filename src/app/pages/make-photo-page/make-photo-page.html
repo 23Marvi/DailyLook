@@ -1,0 +1,13 @@
+<video [hidden]="imageBase64()" #video id="video" autoplay muted playsinline class="video"></video>
+@if (!imageBase64()) {
+    <div class="egg" [style.width.px]="egg().width" [style.height.px]="egg().height" [style.top.px]="egg().y" [style.left.px]="egg().x" [ngClass]="faceInEgg() ? 'green' : 'red'"></div>
+    <div class="buttons">
+        <svg-icon (click)="makePhoto()" src="/assets/svg/camera-solid.svg" class="svg"></svg-icon>
+    </div>
+} @else {
+    <img [src]="imageBase64()" class="photo" />
+    <div class="buttons">
+        <svg-icon (click)="startVideo()" src="/assets/svg/rotate-right-solid.svg" class="svg"></svg-icon>
+        <svg-icon (click)="savePhoto()" src="/assets/svg/floppy-disk-solid.svg" class="svg"></svg-icon>
+    </div>
+}

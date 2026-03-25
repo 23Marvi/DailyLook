@@ -1,1 +1,75 @@
-/* You can add global styles to this file, and also import other style files */
+@use "sass-rem" as *;
+@use "themes" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family;
+    background-color: $background;
+    color: $text;
+    line-height: 1.6;
+    font-size: rem(16px);
+    transition:
+        background-color 0.3s,
+        color 0.3s;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: $heading-font-family;
+    color: $primary;
+}
+
+h1 {
+    font-size: rem(40px);
+}
+
+h2 {
+    font-size: rem(32px);
+}
+
+h3 {
+    font-size: rem(28px);
+}
+
+p {
+    font-size: rem(16px);
+    color: $secondary;
+}
+
+button {
+    background-color: $accent;
+    color: $text;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: rem(16px);
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: $accent-hover;
+    }
+}
+
+.full-screen {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+.router-outlet + * {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.svg {
+    width: 100%;
+    height: auto;
+}

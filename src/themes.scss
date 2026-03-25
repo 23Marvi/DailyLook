@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Inter:700|Inter:400');
+
+$font-family: var(--font-family);
+$heading-font-family: var(--heading-font-family);
+$text: var(--text);
+$background: var(--background);
+$primary: var(--primary);
+$secondary: var(--secondary);
+$accent: var(--accent);
+$accent-hover: var(--accent-hover);
+
+:root {
+    --font-family: "Inter", sans-serif;
+    --heading-font-family: "Inter", sans-serif;
+
+    --text: #090b10;
+    --background: #e7eaf3;
+    --primary: #2d3d67;
+    --secondary: #8298ce;
+    --accent: #4064bf;
+    --accent-hover: #2d3d67;
+
+    --green: #a1e9c5;
+    --red: #f9a8b0;
+}
+
+[theme='dark'] {
+    --text: #e7eaf3;
+    --background: #090b10;
+    --primary: #8298ce;
+    --secondary: #2d3d67;
+    --accent: #4064bf;
+    --accent-hover: #8298ce;
+}
